@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app"
+import { getAnalytics } from "firebase/analytics"
+import { getAuth } from "firebase/auth"
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,8 +16,9 @@ const firebaseConfig = {
   messagingSenderId: "719028066915",
   appId: "1:719028066915:web:d723d1845b72e573113656",
   measurementId: "G-WNPMFMD1P2"
-};
+}
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const app = initializeApp(firebaseConfig)
+export const auth = getAuth(app)
+const analytics = getAnalytics(app)
